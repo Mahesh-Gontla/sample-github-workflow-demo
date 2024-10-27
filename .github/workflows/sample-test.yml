@@ -1,1 +1,14 @@
+name: Sample github actions workflow developed by mahesh
 
+on: [push]
+
+jobs:
+  run-shell-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: string
+        run: echo "Welcome to Devopshint!!"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
