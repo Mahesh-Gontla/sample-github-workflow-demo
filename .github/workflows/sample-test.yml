@@ -12,3 +12,18 @@ jobs:
         run: |
           node -v
           npm -v
+## Using different shells in github actions
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directort Powershell
+        run: Get-Location
+      - name: Directort Bash
+        run: pwd
+        shell: bash
