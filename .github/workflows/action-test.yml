@@ -16,7 +16,7 @@ jobs:
 
       - name: Hello World Action
         id: hello
-        uses: actions/hello-world-javascript-action@v1  # Use the latest stable version
+        uses: actions/hello-world-javascript-action@master  # Use the latest stable version
 
         with:
           who-to-greet: MaheshGontla
