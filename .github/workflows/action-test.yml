@@ -1,7 +1,5 @@
 name: Simple GitHub Actions Workflow for Java Application
 
-#on: [push]
-
 on: 
   push:
   schedule: 
@@ -9,17 +7,33 @@ on:
 # pull_request: 
 #   types: [closed, assigned, opened, reopened]
 
-
 jobs:
-  run-gihub-actions:
+  run-github-actions:
     runs-on: ubuntu-latest
     steps: 
-     - name: Hello World Action
-       id: hello
-       uses: actions/hello-world-javascript-action@master
+      - name: Checkout
+        uses: actions/checkout@v2  # Updated to a stable version
 
-       with:
-         who-to-greet: MaheshGontla
+      - name: Hello World Action
+        id: hello
+        uses: actions/hello-world-javascript-action@v1  # Use the latest stable version
 
-     - name: Get the output time
-       run: echo "${{ steps.hello.outputs.time }}"
+        with:
+          who-to-greet: MaheshGontla
+
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ secrets.GITHUB_TOKEN }}"  # Use secrets for secure access
+
+      - name: List Files After Checkout
+        run: |
+          pwd
+          ls -a
+
+      - name: Get the output time
+        run: echo "${{ steps.hello.outputs.time }}"  # Ensure this output exists
