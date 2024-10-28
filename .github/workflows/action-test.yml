@@ -16,7 +16,7 @@ jobs:
     steps: 
      - name: Hello World Action
        id: hello
-       uses: actions/hello-world-javascript-action@v1
+       uses: actions/hello-world-javascript-action@master
 
        with:
          who-to-greet: devopshint
