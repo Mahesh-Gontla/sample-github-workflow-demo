@@ -19,7 +19,7 @@ jobs:
        uses: actions/hello-world-javascript-action@master
 
        with:
-         who-to-greet: devopshint
+         who-to-greet: MaheshGontla
 
      - name: Get the output time
        run: echo "${{ steps.hello.outputs.time }}"
