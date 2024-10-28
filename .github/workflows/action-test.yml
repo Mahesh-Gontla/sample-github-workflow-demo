@@ -7,6 +7,30 @@ on:
 # pull_request: 
 #   types: [closed, assigned, opened, reopened]
 
+
+
+
+
+## Filtering GitHub Actions Workflow
+#on:
+  #push:
+    #branches:
+   # - master
+   # - dev/*
+    #branch-ignore(it wont run in this branch)
+    #:!sample(wont run in this branch)
+  #tags:
+  # -v1.*.*
+  #paths:
+  # - '**.js'
+  # - '**.md'
+  # - 'docs/*'
+  # - !docs/file.txt'
+
+
+
+
+  
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
