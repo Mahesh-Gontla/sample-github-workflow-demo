@@ -12,7 +12,7 @@ on:
 
 jobs:
   run-gihub-actions:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps: 
      - name: Simple Javascript Action
        id: hello
